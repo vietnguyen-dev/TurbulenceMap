@@ -1,0 +1,132 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    }
+    
+    header {
+        background-color: #2d2d2d;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 50px;
+        padding: 0%;
+        z-index: 2;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin: .5%;
+        color: white;
+        text-align: center;
+    }
+
+    button{
+        font-size: 15px;
+        letter-spacing: 3px;
+        padding: 1.5% 2%;
+        background-size: 200% 100%;
+        /* background-color: #2d2d2d; */
+        color: white;
+        background-image: linear-gradient(to right, #2d2d2d 50%, #C92728 50%);  
+        -webkit-transition: background-position 0.5s;
+        -moz-transition: background-position 0.5s;
+        transition: background-position 0.5s;
+        border-radius: 5px;
+        border: 0;
+        /* background: none;
+        box-shadow: none; */
+    }
+
+    button:hover{
+        background-position: -100% 0;
+    }
+
+    h2{
+        padding-top: 5%;
+        text-align: center;
+        margin: .5%;
+    }
+
+    span{
+        border-bottom: 4px solid #C92728;
+        padding-bottom: 3%;
+    }
+
+    .placeText{
+       padding: 15px 30px;
+       letter-spacing: 1px;
+       line-height: 1.2;
+       font-size: .8em;
+    }
+
+    #map-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 100%;
+    }
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+   #content-container {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 100%;
+   }
+   
+   #content {   
+        width: 100%;
+        height: 100%;
+        margin-top: 50px; 
+        overflow: hidden;
+    }
+
+   .places  {
+        font-family: helvetica, sans-serif;
+        padding: 2%;
+        /* border: 2px solid black; */
+        height: 100%;
+        background-color: white;
+        font-family: 'Noto Sans', sans-serif;
+    }
+
+    #reset  {
+       position: absolute;
+       top: 12%;
+       right: 70px;
+       z-index: 10;
+       display: none;
+    }
+
+    #next  {
+       position: absolute;
+       top: 20%;
+       right: 70px;
+       z-index: 10;
+    
+       
+    }
+
+    .marker {
+        background-image: url(img/cropped-elo_logo_vector.jpg);
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
+    .mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+    }

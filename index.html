@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Turbulence Location Data for Creators</title>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<body>
+    <header><h1>Turbulence Location Data</h1></header>
+	<div id="map-container">
+	   <div id='map'></div>
+       <button id="reset">RESET MAP</button>
+       <button id="next">NEXT</button>
+	</div>
+    <div id="content-container">
+       <div id='content'>
+           <div class="places" id="location">
+           		<!-- <h2>Turbulence Location Data</h2> -->
+           		<p class="placeText">This API tracks the country of origin of all creators in the Turbulence Spreadsheet.</p> 
+           	</div>
+
+            <div class="places" id="Australia">
+            	<h2><span>Australia</span></h2>
+                <div class="placeText">
+                    <p>Creators from Australia include:</p>
+                    <ul> 
+                        <li> Adam Nash </li>
+                        <li> Anna Munster </li>
+                        <li> Chris Mann </li>
+                        <li> Pierre Proske </li>
+                        <li> Troy Innocent </li>
+                        <li> Ollie Olson </li>
+                        <li> Shaolin Wooden </li>
+                        <li> Harry Lee </li>
+                        <li>Out-of-Sync</li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="UnitedStates">
+            	<h2><span>United States</span></h2>
+                <div class="placeText">
+                    <p>Creators from United States include:</p>
+                    <ul> 
+                        <li> Angie Eng </li>
+                        <li> Anna Pinkas </li>
+                        <li> Annette Weintraub</li>
+                        <li> Jesse Gilbert </li>
+                        <li> Brenda Hutchinson </li>
+                        <li> Beth Coleman </li>
+                        <li> Jody Zellen </li>
+                        <li> John Craig Freeman </li>
+                        <li> Allison Parish </li>
+                        <li> Kazys Varnelis</li>
+                        <li> and many more...</li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Canada">
+                <h2><span>Canada</span></h2>
+                <div class="placeText">
+                    <p>Creators from Canada include:</p>
+                    <ul> 
+                        <li> David Johnston </li>
+                        <li> Patricia Reed </li>
+                        <li> Jillian McDonald</li>
+                        <li> Martine Koutnouyan  </li>
+                        <li> Kate Armstrong </li>
+                        <li> Michael Tippet </li>
+                        <li> Thomas Ashton </li>
+                        <li> Peter Horvath </li>
+                        <li> Sonya Allin </li>
+                        <li> Tobias C. Van Veen</li>
+                        <li> and many more...</li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="UnitedKingdom">
+            	<h2><span>United Kingdom</span></h2>
+                <div class="placeText">
+                    <p>Creators from United Kingdom include:</p>
+                    <ul> 
+                        <li> Dane Watkins </li>
+                        <li> Michael Takeo Magruder </li>
+                        <li> Micheál O'Connell</li>
+                        <li> Meeyoung Kim </li>
+                        <li> Jess Loseby </li>
+                        <li> Michael Magruder</li>
+                        <li> ajaykumar </li>
+                        <li> Jess Loseby </li>
+                        <li> Thomson & Craighead</li>
+                        <li> and many more...</li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Netherlands">
+              <h2><span>The Netherlands</span></h2>
+              <div class="placeText">
+                <p>Creators from The Netherlands include: </p>
+                <ul> 
+                    <li> Anne Helmond </li>
+                    <li> Josephine Bosma </li>
+                    <li> Karmin Karasic</li>
+                    <li> Rolf van Gelder </li>
+                    <li> Brigit Lichtenegger</li>
+                    <li> Artem Baguinski</li>
+                    <li> XiaoQian </li>
+                    <li> Martine Neddam </li>
+                    <li> Thomson & Craighead</li>
+                  </ul> 
+              </div>
+             
+            </div>
+
+            <div class="places" id="Ireland">
+                <h2><span>Ireland</span></h2>
+                <div class="placeText">
+                    <p>Creators from Ireland include:</p> 
+                    <ul> 
+                        <li> Owen Gallagher </li>
+                        <li> Mark O’ Cúlár </li>
+                    </ul> 
+                </div>
+                
+            </div>
+
+            <div class="places" id="France">
+            	<h2><span>France</span></h2>
+                <div class="placeText">
+            	    <p>Creators from France include:</p> 
+                    <ul> 
+                        <li> Yasmine Abbas </li>
+                        <li> Annie Abrahams </li>
+                        <li> Willy Whip</li>
+                        <li> Clément Charmet</li>
+                        <li> Benjamin Gaulon</li>
+                        <li> Francesco Michi</li>
+                        <li> Nicholas Clauss </li>
+                    </ul> 
+                </div>
+              
+            </div>
+
+            <div class="places" id="Turkey">
+            	<h2><span>Turkey</span></h2>
+                <div class="placeText">
+                    <p>Creators from the Turkey include: </p>
+                    <ul> 
+                        <li> Ali Miharbi  </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Spain">
+            	<h2><span>Spain</span></h2>
+                <div class="placeText">
+                    <p>Creators from Spain include:</p> 
+                    <ul> 
+                        <li> Belén Gache </li>
+                        <li> Mobius Artists Group </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Argentina">
+            	<h2><span>Argentina</span></h2>
+                <div class="placeText">
+                    <ul> 
+                        <li> Geoffrey Thomas </li>
+                        <li> Luziano Testi Paul </li>
+                    </ul> 
+                </div>
+            	<p>Creators from Argentina include:</p> 
+                
+            </div>
+
+            <div class="places" id="Italy">
+              <h2><span>Italy</span></h2>
+              <div class="placeText">
+                <p>Creators from Italy include:</p>
+                <ul> 
+                  <li> Francesco Michi </li>
+                  <li> Carlo Zanni </li>
+                  <li> Les Liens Invisibles </li>
+              </ul> 
+            </div>
+              
+            </div>
+
+            <div class="places" id="Brazil">
+                <h2><span>Brazil</span></h2>
+                <div class="placeText">
+                    <p>Creators from Brazil include:</p> 
+                    <ul> 
+                        <li> midiatica.org </li>
+                        <li>  Martha Gabriel </li>
+                        <li>  Sylvia Laurentiz </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Yugoslavia">
+            	<h2><span>Yugoslavia</span></h2>
+                <div class="placeText">
+                    
+                </div>
+            	<p>Creators from Yugoslavia include:</p> 
+                <ul> 
+                    <li> Vlasta Volcano Mikic</li>
+                </ul> 
+            </div>
+
+            <div class="places" id="Japan">
+            	<h2><span>Japan</span></h2>
+                <div class="placeText">
+                    <p>Creators from the United States include:</p>
+                    <ul> 
+                        <li> Swako Kato </li>
+                        <li> Yoshi Sodeoka </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Venezuela">
+            	<h2><span>Venezuela</span></h2>
+                <div class="placeText">
+                    <p>Creators from Venezuela include:</p> 
+                    <ul> 
+                        <li> Yusef Merhi </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Scotland">
+            	<h2><span>Scotland</span></h2>
+                <div class="placeText">
+                    <p >Creators from Scotland include: </p> 
+                    <ul> 
+                        <li> Zoe Beloff </li>
+                        <li> Malath Abbas </li>
+                        <li> Tom deMajo </li>
+                        <li> Albert Elwin </li>
+                    </ul> 
+                </div>
+            </div>
+
+            <div class="places" id="Poland">
+              <h2><span>Poland</span></h2>
+              <div class="placeText">
+                <p>Creators from Poland include: </p>
+                <ul> 
+                  <li> Roch Forowics </li>
+                </ul>
+            </div>
+              
+            </div> 
+
+            <div class="places" id="Germany">
+                <h2><span>Germany</span></h2>
+                <div class="placeText">
+                    <p  >Creators from Germany include:</p> 
+                    <ul> 
+                        <li> Agricola de Cologne </li>
+                        <li> Jorn Ebner </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="places" id="Belgium">
+            	<h2><span>Belgium</span></h2>
+                <div class="placeText">
+                    <p>Creators from Belgium include: </p> 
+                    <ul> 
+                        <li> Galza </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="places" id="Tasmania">
+            	<h2><span>Tasmania</span></h2>
+                <div class="placeText">
+                    <p>Creators from the Tasmania include: </p>
+                    <ul> 
+                        <li> X </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="places" id="China">
+            	<h2><span>China</span></h2>
+                <div class="placeText">
+                    <p>Creators from China include:</p> 
+                    <ul> 
+                        <li> Daniel C. Howe. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="places" id="HongKong">
+            	<h2><span>Hong Kong</span></h2>
+                <div class="placeText">
+                    <p>Creators from Hong Kong include: </p> 
+                    <ul> 
+                        <li> Daniel C. Howe. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="places" id="Mongolia">
+              <h2><span>Mongolia</span></h2>
+              <div class="placeText">
+                <p  >Creators from Mongolia include: .</p>
+                <ul> 
+                  <li> Abe Linkoln </li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="places" id="Portugal">
+                <h2><span>Portugal</span></h2>
+                <div class="placeText">
+                    <p>Creators from Portugal include: </p> 
+                    <ul> 
+                        <li> Luis Silva </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="places" id="SouthAfrica">
+                <h2><span>South Africa</span></h2>
+                <div class="placeText">
+                    <p>Creators from South Africa include: </p> 
+                    <ul> 
+                        <li> Marcus Neustetter </li>
+                        <li>Jo-Anne Green </li>
+                    </ul>
+                </div>
+            </div>
+       </div>
+    </div>
+<script src="app.js">
+</script>
+
+</body>
+</html>
